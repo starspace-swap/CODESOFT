@@ -1,0 +1,196 @@
+/* Far background stars */
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 2px 2px, white 0.5px, transparent 0);
+  background-size: 25px 25px;
+  opacity: 0.24;
+  z-index: 1;
+}
+
+/* Foreground stars */
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  z-index: 2;
+  animation: twinkle 2s infinite alternate;
+}
+
+/* Flicker */
+@keyframes twinkle {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 0.9;
+  }
+}
+
+/* Different drift patterns */
+@keyframes drift-left-down {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-200px, 200px);
+  }
+}
+
+@keyframes drift-right-up {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(200px, -200px);
+  }
+}
+
+@keyframes drift-left-up {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-150px, -150px);
+  }
+}
+
+@keyframes drift-right-down {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(150px, 150px);
+  }
+}
+
+/* Assign different animations */
+.star.left-down {
+  animation:
+    drift-left-down 25s linear infinite,
+    twinkle 2s infinite alternate;
+}
+.star.right-up {
+  animation:
+    drift-right-up 30s linear infinite,
+    twinkle 2s infinite alternate;
+}
+.star.left-up {
+  animation:
+    drift-left-up 28s linear infinite,
+    twinkle 2s infinite alternate;
+}
+.star.right-down {
+  animation:
+    drift-right-down 22s linear infinite,
+    twinkle 2s infinite alternate;
+}
+
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 200;
+  font-style: normal;
+}
+.name {
+  text-shadow: 2px 1px 2px rgba(128, 128, 128, 0.49);
+  color: rgba(255, 255, 255, 0.867);
+  /* margin-bottom: none;
+        padding-bottom: none; */
+}
+
+.audiowide-regular {
+  font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: x-large;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.links {
+  text-decoration: none;
+  text-underline-offset: 2px;
+  color: rgb(171, 169, 185);
+}
+
+.sub-heads {
+  color: aliceblue;
+  margin-left: 5%;
+  font-family: "Montserrat";
+}
+
+.para {
+  color: aliceblue;
+  /* font-family: monospace; */
+  font-weight: 300;
+  font-size: medium;
+  margin-left: 5%;
+  text-align: justify;
+}
+
+button{
+  color:rgb(0, 0, 103);
+  font-size:medium;
+  background-color: rgb(127, 223, 255);
+  border-radius: 8px;
+  padding:7px 7px
+}
+header {
+  justify-content: center;
+  align-items: center;
+  
+  gap: 29%;
+  display: flex;
+  padding: 0.2%;
+  padding-left: 2%;
+ 
+}
+
+article {
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+  display: flex;
+  padding: 0.2% 0;
+  margin-right: 10%;
+  margin-left:7%;
+  max-width: 85%;
+}
+.project-article{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+  display: flex;
+  padding: 0.2% 0;
+  margin-right: 10%;
+  margin-left:10%;
+  max-width: 75%;
+}
+.social-links {
+  display: flex;
+  gap: 20px; /* spacing between icons */
+}
+footer {
+  position: relative;
+  margin-top: auto;
+  width: 100%;
+  height: fit-content;
+  background-color: rgba(112, 128, 144, 0.184);
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 2%;
+  display: flex;
+  padding: 3% 0;
+}
+
