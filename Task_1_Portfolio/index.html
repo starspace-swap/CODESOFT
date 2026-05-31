@@ -147,10 +147,11 @@
   <article class="project-article">
     <h2 class="sub-head montserrat" style="color: aliceblue; margin-left:5%;">Projects</h2>
     <div class="montserrat para">
-      
+
       <h3>CareConnect</h3>
-      <p ><strong>Status:</strong> Initiated / Core Project</p>
-      <p>A comprehensive, full-stack specialized assistance management platform built using the MERN stack and native Android
+      <p><strong>Status:</strong> Initiated / Core Project</p>
+      <p>A comprehensive, full-stack specialized assistance management platform built using the MERN stack and native
+        Android
         development. Responsibilities and milestones achieved include:</p>
       <ul>
         <li>Authored complete Software Requirements Specifications (SRS) and architecture documentation.</li>
@@ -159,20 +160,32 @@
           efficiently.</li>
       </ul>
     </div>
-    <img src=""/>
+    <div class="slideshow-contianer" style="margin-left: 20%;">
+      <div class="mySlides fade">
+        <img src="./src/Screenshot_(1).png" width="100%" title="CareConnect" />
+      </div>
+      <div class="mySlides fade">
+        <img src="./src/Screenshot_(2).png" width="100%" title="CareConnect" />
+      </div>
+      <div class="mySlides fade">
+        <img src="./src/Screenshot_(7).png" width="100%" title="CareConnect" />
+      </div>
+    </div>
     <div class="montserrat para">
       <h3>Mobile Application controlled ESP 32 based robocar </h3>
       <p><strong>Status:</strong> Completed / Core Hardware Development</p>
       <p>The project was aimed at creating a scratch based mobile application built on MIT App Inventor :
-      https://appinventor.mit.edu/ . That sends Bluetooth signals specific to the button pressed to control robocar</p>
+        https://appinventor.mit.edu/ . That sends Bluetooth signals specific to the button pressed to control robocar
+      </p>
       <ul>
         <li>Programmed the microcontroller to interface with motors. </li>
-        <li>The project involved the use of ESP 32 coded in Arduino Framework (C++) to control the robocar via a motor driver.</li>
+        <li>The project involved the use of ESP 32 coded in Arduino Framework (C++) to control the robocar via a motor
+          driver.</li>
       </ul>
     </div>
     <div class="para audiowide-regular">
       <p>
-        And Building ..... 
+        And Building .....
       </p>
     </div>
   </article>
@@ -180,12 +193,13 @@
   <!-- View Resume and Email Buttons  -->
   <article style="margin-bottom:2%">
     <div>
-      <a href="https://drive.google.com/file/d/1kp_0y-JMbokD4P0OZ832PGQampf1asKC/view?usp=sharing" title="view Resume" style="position: relative; z-index: 999">
+      <a href="https://drive.google.com/file/d/1kp_0y-JMbokD4P0OZ832PGQampf1asKC/view?usp=sharing" title="view Resume"
+        style="position: relative; z-index: 999">
         <button class="sub-head montserrat">
-        View Resume
-      </button>
+          View Resume
+        </button>
       </a>
-      
+
     </div>
     <div>
       <button class="sub-head montserrat" id="email-copy" style="position: relative; z-index: 999">
@@ -193,6 +207,23 @@
       </button>
     </div>
     <script>
+      // project content side show
+      let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) { slideIndex = 1 }
+          slides[slideIndex - 1].style.display = "block";
+          setTimeout(showSlides, 5000); // Change image every 2 seconds
+        }
+        //Email Button
       const emailBtn = document.getElementById("email-copy");
 
       emailBtn.addEventListener("click", () => {
